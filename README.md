@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](https://your-solution-url.com)
-- Live Site URL: [Ecommerce App](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/iamRed-One/eccommerce_app)
+- Live Site URL: [Ecommerce App](https://ridwanssimpleecommerce.netlify.app/)
 
 ## My process
 
