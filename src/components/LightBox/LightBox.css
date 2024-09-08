@@ -1,0 +1,75 @@
+.light-box {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 0%, 75%);
+  z-index: 3;
+}
+
+.light-box-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-light-box {
+  position: absolute;
+  top: -35px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.close-light-box:hover svg path {
+  fill: hsl(26, 100%, 55%);
+}
+
+.light-box .display-thumbnails {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.light-box picture {
+  width: 60px;
+}
+
+.light-box .arrow-icons {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: grid;
+  place-content: center;
+  background-color: #fff;
+  margin-top: -60px;
+  z-index: 3;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  overflow: visible;
+}
+
+.arrow-icons svg {
+  transform: scale(0.8);
+}
+
+.prev {
+  margin-right: -10px;
+}
+
+.next {
+  margin-left: -10px;
+}
+
+.arrow-icons:hover svg path {
+  stroke: hsl(26, 100%, 55%);
+}
+
+@media (max-width: 750px) {
+  .light-box {
+    display: none;
+  }
+}

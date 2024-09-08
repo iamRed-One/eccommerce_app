@@ -1,0 +1,143 @@
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%, 75%);
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 4rem;
+  padding-block: 1.5rem;
+  border-bottom: 2px solid hsl(223, 64%, 98%);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar-menu a {
+  color: hsl(219, 9%, 45%);
+  font-size: max(1.1vw, 0.9rem);
+  padding-bottom: 2rem;
+  display: inline;
+}
+
+.navbar-menu .active {
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-right img {
+  width: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.navbar-right .avatar-img {
+  width: 40px;
+  border-radius: 50%;
+  outline: 3px solid transparent;
+}
+
+.navbar-right .avatar-img:hover {
+  outline-color: hsl(26, 100%, 55%);
+  transition: outline 0.3s;
+}
+
+.navbar-right .cart-icon {
+  position: relative;
+}
+
+.navbar-right .dot {
+  min-height: 15px;
+  min-width: 15px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  aspect-ratio: 1 / 1;
+  background-color: hsl(26, 100%, 55%);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon,
+.menu-close {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    margin-inline: 1.2rem;
+  }
+
+  .navbar-left {
+    gap: 1.4rem;
+  }
+
+  .menu-icon,
+  .menu-close {
+    display: block;
+  }
+
+  .menu-close {
+    margin-bottom: 1.5rem;
+  }
+
+  .navbar-menu {
+    background: #fff;
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    gap: 1.2rem;
+    width: 250px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+
+  .navbar-menu.active {
+    transform: translateY(0);
+  }
+
+  .navbar-menu a {
+    color: hsl(0, 0%, 0%);
+    font-weight: 600;
+  }
+
+  .navbar-menu a.active {
+    border: none;
+  }
+}

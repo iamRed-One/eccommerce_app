@@ -1,0 +1,39 @@
+.success-popup {
+  position: absolute;
+  top: 12%;
+  right: 20px;
+  z-index: 9999;
+  background-color: #fff;
+  min-width: 300px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+}
+
+.success-popup p {
+  position: relative;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.success-popup p::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 4px;
+  background-color: green;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
